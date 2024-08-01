@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>About Me</h1>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-content">
+        <h2 class="toggle-heading">Skills</h2>
+        <div class="toggle-content">
+            <ul>
+                {% for skill in skills %}
+                <li>
+                    <h3>{{ skill.skill_name }}</h3><br />
+                    <p>{{ skill.description }}</p><br />
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section-content">
+        <h2 class="toggle-heading">Certificates</h2>
+        <div class="toggle-content">
+            <div class="certificates-grid">
+                {% for certificate in certificates %}
+                <div class="certificate">
+                    <img src="{{ url_for('static', filename='certifications/' + certificate) }}" alt="Certificate">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Modal structure -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Large view">
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

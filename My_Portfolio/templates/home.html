@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="container">
+    <div class="content">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <h4>WELCOME TO MY PORTFOLIO!</h4>
+        <h1>Hello, my name is <span>Samarth Vohra</span>, ML Engineer \ Data Scientist \ Web Developer \ Software Developer \ Musician</h1>
+        <p>
+            Hello! I'm Samarth Vohra, a dedicated and passionate software developer with a strong background in machine learning, web development, and database management. I hold a degree in Computer Science and have gained valuable experience through various internships, competitions, and personal projects.
+
+            I specialize in Python and have developed numerous machine learning models and web applications. My work demonstrates a blend of technical expertise and creativity, solving real-world problems with innovative solutions. I am proficient in tools and technologies such as Django, Flask, SQL, JavaScript, and more.
+
+            I am constantly exploring new technologies and methodologies to enhance my skills and deliver high-quality projects. My journey in tech has been marked by a commitment to continuous learning and a drive to push the boundaries of what is possible.
+
+            When I'm not coding, I enjoy composing music, art, creative writing, which helps me stay balanced and inspired.
+
+            Let's connect and see how we can collaborate to create something extraordinary!
+        </p>
+        
+    </div>
+    <div class="image">
+        <img src="{{ url_for('static', filename='images/header2.png') }}" alt="Header">
+    </div>
+</header>
+
+<section class="container">
+    <h2 class="header">CONTENTS</h2>
+    <div class="features">
+        <div class="card">
+            <span>
+                <i class="ri-book-open-line"></i>
+            </span>
+            <h4>About Me</h4>
+            <p>
+                Welcome to my portfolio! I'm Samarth Vohra, a passionate software developer and data scientist with expertise in Python, machine learning, web development, and database management. With a keen eye for detail and a drive for excellence, I thrive on solving complex problems and building innovative solutions. My journey in the tech world has equipped me with a diverse skill set and a portfolio of projects that showcase my abilities. I am always eager to learn new technologies and take on challenging projects. Let's connect and create something amazing together!
+            </p>
+            <a href="{{ url_for('about') }}">See More<i class="ri-arrow-right-double-fill"></i></a>
+        </div>
+        <div class="card">
+            <span>
+                <i class="ri-git-repository-line"></i>
+            </span>
+            <h4>My Projects</h4>
+            <p>
+                Explore my collection of projects where theory meets practice. From machine learning models to web applications, each project demonstrates my technical skills and commitment to quality. You'll find detailed descriptions, source code, and live demos that highlight my approach to solving real-world problems. Whether it's predicting sales trends, developing a sentiment analysis tool, or building an inventory management system, my projects reflect my versatility and dedication to continuous learning.
+            </p>
+            <a href="{{ url_for('projects') }}">See More<i class="ri-arrow-right-double-fill"></i></a>
+        </div>
+        <div class="card">
+            <span>
+                <i class="ri-contacts-book-line"></i>
+            </span>
+            <h4>Contact Me</h4>
+            <p>
+                'd love to hear from you! Whether you have a project idea, a job opportunity, or just want to connect, feel free to reach out. You can contact me through the form on this page, or connect with me on LinkedIn and GitHub. Let's discuss how we can collaborate and achieve great things together. Your message is important to me, and I will get back to you as soon as possible.
+            </p>
+            <a href="{{ url_for('contact') }}">Contact Me<i class="ri-arrow-right-double-fill"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

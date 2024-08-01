@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="SamVPortfolio">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li class="link"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="link"><a href="{{ url_for('about') }}">About</a></li>
+            <li class="link"><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li class="link"><a href="{{ url_for('contact') }}">Contact Me</a></li>
+        </ul>
+        <a href="{{url_for('hireme')}}">
+            <button class="btn" type="button">Hire Me</button>
+        </a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="container">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="column">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="">
+            </div>
+            <p>
+                Thank you for visiting my portfolio! Stay connected with me through my social media channels and feel free to reach out for collaborations, job opportunities, or just to say hello. You can find links to my LinkedIn, GitHub, and other platforms below. Let's create something amazing together!
+            </p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/samarth-vohra-480084256/"><i class="ri-linkedin-box-line"></i></a>
+                <a href="https://github.com/samvlp03"><i class="ri-github-line"></i></a>
+                <a href="https://www.instagram.com/samv_lp_03"><i class="ri-instagram-line"></i></a>
+            </div>
+            <div class="copyright">
+                Copyright &copy; 2024 Samarth Vohra. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

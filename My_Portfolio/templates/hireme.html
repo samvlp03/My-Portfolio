@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Hire Me{% endblock %}
+
+{% block content %}
+<div class="hiring">
+    <h1>Welcome to My Profile</h1>
+    <p>Here, you can view or download my CV.</p>
+    <button onclick="window.location.href = '{{ url_for('view_cv') }}';">View My CV</button>
+    <button onclick="window.location.href = '{{ url_for('download_cv') }}';">Download My CV</button>
+
+    <p>If you wish to contact me, please visit the <a href="{{ url_for('contact') }}">Contact Page</a>.</p>
+
+    <h2>Why I Should Be Hired</h2>
+    <p>I am a dedicated professional with a proven track record of success in my field. My skills, experience, and passion for the industry make me a valuable asset to any team. I bring a unique blend of technical expertise and creative problem-solving abilities, ensuring that I can tackle any challenge that comes my way. I am committed to continuous learning and improvement, and I am eager to contribute to your company's success.</p>
+</div>
+{% endblock %}
