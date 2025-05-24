@@ -347,7 +347,7 @@ input, textarea {
     margin-top: 5px;
     border: 1px solid #4d6bcd;
     border-radius: 5px;
-    max-width: 100vw;
+    max-width: stretch;
 }
 
 button {
